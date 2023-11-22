@@ -1,6 +1,6 @@
 # GitHub Action: push git branch kit
 
-[![](https://github.com/byteplatform/push-git-branch-kit/workflows/Scheduled%20tests/badge.svg)](https://github.com/byteplatform/push-git-branch-kit/actions?workflow=Scheduled+tests) [![codecov](https://codecov.io/gh/byteplatform/push-git-branch-kit/branch/master/graph/badge.svg)](https://codecov.io/gh/byteplatform/push-git-branch-kit) [![](https://raw.githubusercontent.com/byteplatform/push-git-branch-kit/gh-badges/drift.svg)](https://github.com/s0/libyear-node-action) [![](https://raw.githubusercontent.com/byteplatform/push-git-branch-kit/gh-badges/releases.svg)](https://github.com/s0/libyear-node-action)
+[![](https://github.com/sokeio/push-git-branch-kit/workflows/Scheduled%20tests/badge.svg)](https://github.com/sokeio/push-git-branch-kit/actions?workflow=Scheduled+tests) [![codecov](https://codecov.io/gh/sokeio/push-git-branch-kit/branch/master/graph/badge.svg)](https://codecov.io/gh/sokeio/push-git-branch-kit) [![](https://raw.githubusercontent.com/sokeio/push-git-branch-kit/gh-badges/drift.svg)](https://github.com/s0/libyear-node-action) [![](https://raw.githubusercontent.com/sokeio/push-git-branch-kit/gh-badges/releases.svg)](https://github.com/s0/libyear-node-action)
 
 This GitHub Action will take any subdirectory in your repository, and push it as the contents of a git branch to a repository and branch of your choosing, either over SSH or to the current repo.
 
@@ -14,7 +14,7 @@ If the target branch doesn't exist yet, it will be created automatically.
 
 ## Usage
 
-Simply include the action `byteplatform/push-git-branch-kit@develop` in the appropriate point in your workflow, and pass in the required configuration options:
+Simply include the action `sokeio/push-git-branch-kit@develop` in the appropriate point in your workflow, and pass in the required configuration options:
 
 ```yml
 jobs:
@@ -28,7 +28,7 @@ jobs:
 
     # Deploy to local repo
     - name: Deploy
-      uses: byteplatform/push-git-branch-kit@develop
+      uses: sokeio/push-git-branch-kit@develop
       env:
         REPO: self
         BRANCH: gh-pages
@@ -37,7 +37,7 @@ jobs:
 
     # Deploy to another repo
     - name: Deploy
-      uses: byteplatform/push-git-branch-kit@develop
+      uses: sokeio/push-git-branch-kit@develop
       env:
         REPO: git@github.com:owner/repo.git
         BRANCH: gh-pages
@@ -65,7 +65,7 @@ jobs:
     - uses: actions/checkout@master
 
     - name: Deploy
-      uses: byteplatform/push-git-branch-kit@develop
+      uses: sokeio/push-git-branch-kit@develop
       env:
         REPO: self
         BRANCH: gh-pages
@@ -91,7 +91,7 @@ jobs:
     - uses: actions/checkout@master
 
     - name: Deploy
-      uses: byteplatform/push-git-branch-kit@develop
+      uses: sokeio/push-git-branch-kit@develop
       env:
         REPO: self
         BRANCH: gh-pages
@@ -125,7 +125,7 @@ jobs:
         npm run build
 
     - name: Deploy
-      uses: byteplatform/push-git-branch-kit@develop
+      uses: sokeio/push-git-branch-kit@develop
       env:
         REPO: git@github.com:owner/repo.git
         BRANCH: gh-pages
@@ -162,7 +162,7 @@ jobs:
         npm run build
 
     - name: Deploy
-      uses: byteplatform/push-git-branch-kit@develop
+      uses: sokeio/push-git-branch-kit@develop
       env:
         REPO: git@mydomain.com:path/to/repo.git
         BRANCH: artifacts
@@ -223,7 +223,7 @@ Example Usage:
 ```yml
 jobs:
   deploy:
-    - uses: byteplatform/push-git-branch-kit@develop
+    - uses: sokeio/push-git-branch-kit@develop
       env:
         # ...
         MESSAGE: "This updates the content to the commit {sha} that had the message:\n{msg}"
@@ -291,7 +291,7 @@ And the workflow file `.github/workflows/ci.yml`:
 ```yml
 jobs:
   deploy:
-    - uses: byteplatform/push-git-branch-kit@develop
+    - uses: sokeio/push-git-branch-kit@develop
       env:
         # ...
         CLEAR_GLOBS_FILE: ".clear-target-files"

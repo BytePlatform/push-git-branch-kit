@@ -242,7 +242,7 @@ describe('Misconfigurations', () => {
       .runWithGithubEnv(
         folders.testName,
         {
-          REPO: 'https://github.com/byteplatform/push-git-branch-kit-tests.git',
+          REPO: 'https://github.com/sokeio/push-git-branch-kit-tests.git',
           BRANCH: 'branch-a',
           FOLDER: folders.dataDir,
         },
